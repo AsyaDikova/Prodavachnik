@@ -57,7 +57,7 @@ function startApp () {
     function loginUser() {
         const kinveyLoginUrl = kinveyBaseUrl + "user/" + kinveyAppKey + "/login";
         const kinveyAuthHeaders = {
-            "Basic " + btoa(kinveyAppKey + ":" + kinveyAppSecret),
+          'Authorization': "Basic " + btoa(kinveyAppKey + ":" + kinveyAppSecret),
         };
         let userData = {
             username: $('#formLogin input[name=username]').val(),
